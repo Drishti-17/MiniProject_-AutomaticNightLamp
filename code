@@ -1,0 +1,21 @@
+// C++ code for Automatic Night Lamp
+int Led1=13;
+void setup()
+{
+ Serial.begin(9600);
+ pinMode(Led1,OUTPUT) ;
+}
+
+void loop()
+{
+  int c = analogRead(A0) ;
+  Serial.println(c) ;
+  if(c<300)
+  {
+    digitalWrite(Led1,LOW) ; 
+  }
+  else
+  {
+    digitalWrite(Led1,HIGH) ; 
+  }
+}
